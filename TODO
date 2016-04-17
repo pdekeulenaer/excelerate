@@ -1,0 +1,18 @@
+LAYOUT
+- write basic views for category, home & posts
+- implement simple bootstrap theme
+- load necessary bootstrap JS and CSS files (JQuery, nodeJS,...)
+
+MODELING
+- build comment module linked to post and user
+- build user registration features
+
+AUGMENTATION
+- include 'wysiwig' plugin
+- include 'mailinglist' plugin
+- include d3.js graphing plugin
+
+CONTENT
+- convert content from joomla to django site
+
+

@@ -13,6 +13,7 @@ AUGMENTATION
 - include d3.js graphing plugin
 
 CONTENT
-- convert content from joomla to django site
+- Fix format of articles
 
-
+OPTIMIZATION
+- create absolute URL reference to blog post and use everywhere

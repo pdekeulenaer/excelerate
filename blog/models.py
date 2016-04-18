@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.urlresolvers import reverse
 
 # Create your models here.
 
@@ -9,6 +10,7 @@ class Post(models.Model):
 	title = models.CharField(max_length=500, unique=True)
 	title_slug = models.SlugField(max_length=500, unique=True)
 	publication_date = models.DateTimeField('date created', auto_now_add=True)
+	published = models.BooleanField(default=False, blank=False)
 	content = models.TextField()
 
 	author = models.ForeignKey(User, default=None)

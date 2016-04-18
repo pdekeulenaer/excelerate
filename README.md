@@ -1,5 +1,5 @@
 <b>Excelerate blog files</b>
-This repository contains a blog I am developing. It is a basic Django project, currently leveraging the standard Django libraries together with a bootstrap theme.
+<p>This repository contains a blog I am developing. It is a basic Django project, currently leveraging the standard Django libraries together with a bootstrap theme.</p>
 
 <b>Main todo's</b>
 <ul>

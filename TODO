@@ -8,7 +8,7 @@ MODELING
 - build user registration features
 
 AUGMENTATION
-- include 'wysiwig' plugin
+- customize WYSIWYG plugin
 - include 'mailinglist' plugin
 - include d3.js graphing plugin
 

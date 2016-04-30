@@ -17,7 +17,6 @@ def index(request):
 	return render(request, 'blog/index.html', {'posts' : posts[:3]})
 
 
-
 def category_index(request, category_id):
-	return HttpResponse("Overview of all blogposts in %s" % (category_id))
+	return render(request, 'blog/test.html')
 

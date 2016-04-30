@@ -132,3 +132,10 @@ STATICFILES_FINDERS = (
 
 # Configure WYSIWYG
 DJANGO_WYSIWYG_FLAVOR = "ckeditor"
+
+CKEDITOR_CONFIGS = {
+    'id_content_editor': {
+        'toolbar': None,
+        'height': 100,
+    },
+}

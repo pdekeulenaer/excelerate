@@ -8,5 +8,7 @@ CKEDITOR.editorConfig = function( config ) {
 	config.language = 'fr';
 	config.uiColor = '#000000';
 	CKEDITOR.replace('textarea');
+	config.extraPlugins = 'autogrow';
+	config.autoGrow_minHeight = 1000;
 };
 

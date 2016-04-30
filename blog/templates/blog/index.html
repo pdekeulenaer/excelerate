@@ -19,21 +19,27 @@
 <p><span class="glyphicon glyphicon-time"></span> Posted on {{post.publication_date | date:"g:i A, D j F Y" }}</p>
 <hr>
 <p>
-    {{ post.content | truncatewords:50 | striptags }}
+    {{ post.content | truncatewords:50 | striptags }} <a href="/blog/post/{{post.id}}">read more</a>
 </p>
-<a class="btn btn-primary" href="/blog/post/{{post.id}}">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+
 
 <hr>
 {% endfor %}
 
 <!-- Pager -->
 <ul class="pager">
+    {% if posts.has_previous %} 
     <li class="previous">
-        <a href="#">&larr; Older</a>
+        <a href="?page={{ posts.previous_page_number }}">&larr; Newer</a>
     </li>
+    {% endif %}
+    <li>Page {{ posts.number }} of {{ posts.paginator.num_pages }} </li>
+    
+    {% if posts.has_next %} 
     <li class="next">
-        <a href="#">Newer &rarr;</a>
+        <a href="?page={{ posts.next_page_number }}">Older &rarr;</a>
     </li>
+    {% endif %} 
 </ul>
 </div>
 {% endblock %}

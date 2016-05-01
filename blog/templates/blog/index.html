@@ -4,25 +4,27 @@
 
 {%block main_content %}
 
-<h1 class="page-header">
+<h2 class="page-header">
     Ecxelerate
     <small>Latest posts on Excel</small>
-</h1>
+</h2>
 
 <div class="col-md-8">
 <!-- First Blog Post -->
 {% for post in posts %}
-<h2>
-    <a href="/blog/post/{{post.id}}">{{post.title}}</a>
-</h2>
-
-<p><span class="glyphicon glyphicon-time"></span> Posted on {{post.publication_date | date:"g:i A, D j F Y" }}</p>
-<hr>
-<p>
-    {{ post.content | truncatewords:50 | striptags }} <a href="/blog/post/{{post.id}}">read more</a>
-</p>
-
-
+<div class="row">
+        <h3>
+            <a href="/blog/post/{{post.id}}">{{post.title}}</a>
+        </h3>
+</div>
+<div class="row">
+    <p>
+        {{ post.content | truncatewords:50 | striptags | safe }} <a href="/blog/post/{{post.id}}">read more</a>
+    </p>
+</div>
+<div class="row">
+        <h5 class="text-right color-gray">{{post.publication_date | date:"D j F Y" }}</h5>
+</div>
 <hr>
 {% endfor %}
 

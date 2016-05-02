@@ -1,0 +1,18 @@
+    <div class="container">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="row message{% if message.tags %} message-{{ message.tags }}"{% endif %}>
+                    
+                        {% if message.tags == 'info' or message.tags == 'success' %}
+                            <span class="msgglyph glyphicon glyphicon-ok"></span>
+                        {% elif message.tags == 'warning' or message.tags == 'debug' %}
+                            <span class="msgglyph glyphicon glyphicon-warning-sign"></span>
+                        {% elif message.tags == 'error' %}
+                            <span class="msgglyph glyphicon glyphicon-remove"></span>
+                        {% endif %}
+
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>

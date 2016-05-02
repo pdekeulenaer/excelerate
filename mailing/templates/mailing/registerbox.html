@@ -1,0 +1,22 @@
+{% if not request.session.registered_email or True %}
+
+<div class="well">
+	<h4>Register for our newsletter!</h4>
+	<div class="input-group">
+		
+		<form action="/mailing/activate/" method="post">
+		{% csrf_token %}
+	    <span class="input-group-btn">
+	    <input id="id_email" name="email" type="email" class="form-control"/>
+	        <button class="btn btn-default" type="submit" >
+	            <span class="glyphicon glyphicon-chevron-right"></span>
+	    	</button>
+	    <input type="hidden" name="next" value="{% firstof request.path '/' %}" />
+	    </span>
+		</form>
+	
+	</div>
+<!-- /.input-group -->
+</div>
+
+{%  endif %}

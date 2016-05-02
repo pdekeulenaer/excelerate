@@ -1,0 +1,41 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Excelerate home{% endblock %}
+
+{%block main_content %}
+
+<h2 class="page-header">
+    Ecxelerate
+    <small>Latest posts on Excel</small>
+</h2>
+
+<div class="col-md-8">
+
+
+	<form action="/mailing/activate/" method="post">
+	{% csrf_token %}
+		
+		{{ form }}
+		
+		<input type="submit" value="ok">
+
+	</form>
+
+</div>
+{% endblock %}
+
+
+
+
+<div class="well">
+                    <h4>Register for our newsletter!</h4>
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                        </button>
+                        </span>
+                    </div>
+                    <!-- /.input-group -->
+                </div>

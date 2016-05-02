@@ -9,7 +9,6 @@ MODELING
 
 AUGMENTATION
 - customize WYSIWYG plugin
-- include 'mailinglist' plugin
 - include d3.js graphing plugin
 
 CONTENT
